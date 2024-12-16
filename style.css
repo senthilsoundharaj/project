@@ -1,133 +1,99 @@
 body {
-
     background-color: #18FFFF;
-
     background-position: center;
-
     background-size: cover;
-
     background-attachment: fixed;
-
     background-repeat: no-repeat;
-
-    background-image: url(global-currency-background_115579-405.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('global-currency-background_115579-405.avif');
 }
 
-
 .heading {
-
-    /* font-family: 'Pacifico', cursive; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 60px;
-color: antiquewhite;
+    color: antiquewhite;
     margin: 35px auto 20px;
 }
 
-
 hr {
-
     border-top: 2px solid black;
-
     width: 40%;
-
     margin-bottom: 55px;
 }
 
-
 .main {
-
     width: 50vw;
-
     margin: auto;
-
     padding: 30px;
-
     border-radius: 5px;
-
     background-color: rgba(0, 0, 0, 0.5);
-
     color: white;
 }
 
-
 label {
-
     font-size: 20px;
 }
 
-
-.btn {
-
-    width: 200px;
+.searchBox {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-
-#finalAmount {
-
-    font-family: 'Lobster', cursive;
-
-    display: none;
-
-    margin: 50px auto;
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
+button:hover {
+    background-color: #004d40;
+}
 
 #finalAmount h2 {
-
     font-size: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: antiquewhite;
 }
 
-
 .finalValue {
-
     font-family: 'Amiri', serif;
     color: antiquewhite;
 }
 
-
-
 @media (max-width: 768px) {
-
     hr {
-
         width: 60%;
-
     }
 
     .main {
-
         width: 100%;
-
     }
 }
 
-
-
 @media (max-width: 400px) {
-
     .heading {
-
-        font-size: 60px;
-
+        font-size: 45px;
     }
 
     hr {
-
         width: 75%;
-
     }
 
     #finalAmount h2,
     .finalValue {
-
         font-size: 40px;
-
     }
 }

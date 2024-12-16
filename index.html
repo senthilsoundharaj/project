@@ -1,16 +1,51 @@
-<input type="text" class="searchBox" placeholder="Amount to convert">
-<select class="from">
-    <option value="USD">USD</option>
-    <option value="EUR">EUR</option>
-    <!-- Add other currencies -->
-</select>
-<select class="to">
-    <option value="EUR">EUR</option>
-    <option value="USD">USD</option>
-    <!-- Add other currencies -->
-</select>
-<button class="convert">Convert</button>
-<div class="finalAmount" style="display: none;">
-    <span class="finalValue"></span>
-</div>
-<button onclick="clearVal()">Reset</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main heading -->
+    <h1 class="heading">Currency Converter</h1>
+    <hr>
+
+    <!-- Main content area -->
+    <div class="main">
+        <label for="amount">Amount</label>
+        <input type="text" class="searchBox" placeholder="Amount to convert" id="amount">
+
+        <label for="fromCurrency">From</label>
+        <select class="from">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <!-- Add more currencies here -->
+        </select>
+
+        <label for="toCurrency">To</label>
+        <select class="to">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <!-- Add more currencies here -->
+        </select>
+
+        <button class="convert">Convert</button>
+
+        <div id="finalAmount" style="display: none;">
+            <h2>Converted Amount:</h2>
+            <span class="finalValue"></span>
+        </div>
+
+        <button onclick="clearVal()">Reset</button>
+    </div>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

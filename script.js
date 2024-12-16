@@ -64,7 +64,9 @@ function displayResults(currency) {
 
 // When user clicks reset button, clear values
 function clearVal() {
-    window.location.reload();
-    document.querySelector(".finalValue").innerHTML = "";
-    finalAmount.style.display = "none";
+    search.value = '';  // Clear the search input
+    fromCurrency.selectedIndex = 0;  // Reset the "from" currency dropdown
+    toCurrency.selectedIndex = 0;  // Reset the "to" currency dropdown
+    finalValue.innerHTML = '';  // Clear the result display
+    finalAmount.style.display = "none";  // Hide the result section
 }
