@@ -44,4 +44,50 @@ body {
     width: 100%;
     bottom: 0;
   }
-  
+ /* Box Design for pH Input Section */
+ .monitoring-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .monitoring-box h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+  }
+  .monitoring-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  .monitoring-box input,
+  .monitoring-box select,
+  .monitoring-box button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .monitoring-box button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .monitoring-box button:hover {
+    background-color: #45a049;
+  }
+  #result {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+  }

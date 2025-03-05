@@ -5,28 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Water Quality Monitoring</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Box Design for pH Input Section */
+    .monitoring-box {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 400px;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .monitoring-box h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+    }
+    .monitoring-box label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+    .monitoring-box input,
+    .monitoring-box select,
+    .monitoring-box button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .monitoring-box button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .monitoring-box button:hover {
+      background-color: #45a049;
+    }
+    #result {
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
-    <header>
+  <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="FAQ.html">Help</a></li>
+        <li><a href="login.html">Login</a></li>
         <li><a href="help.html">Help</a></li>
+        <li><a href="faq.html">FAQ</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <h1>Water Quality Monitoring System</h1>
-    <section>
+    <div class="monitoring-box">
+      <h2>Check Water pH</h2>
       <label for="pHInput">Enter Water pH:</label>
       <input type="number" id="pHInput" step="0.1" placeholder="e.g., 6.5">
-      <button onclick="checkPlantSuitability()">Check Suitability</button>
-    </section>
 
-    <section>
       <label for="plantSelect">Select a Plant:</label>
       <select id="plantSelect">
         <option value="Tomato">Tomato</option>
@@ -34,12 +82,10 @@
         <option value="Hydrangea (Blue)">Hydrangea (Blue)</option>
         <option value="Hydrangea (Pink)">Hydrangea (Pink)</option>
       </select>
-    </section>
 
-    <section id="result"></section>
+      <button onclick="checkPlantSuitability()">Check Suitability</button>
+      <div id="result"></div>
+    </div>
   </main>
 
-  
   <script src="script.js"></script>
-  </body>
-</html>
