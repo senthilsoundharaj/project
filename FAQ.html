@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Water Quality Monitoring</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* FAQ Page Specific Styles */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .faq-item {
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .faq-question {
+      background-color: #f9f9f9;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question::after {
+      content: "▼";
+      font-size: 12px;
+      transition: transform 0.3s;
+    }
+    .faq-question.active::after {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      padding: 0 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+    .faq-answer.open {
+      padding: 15px;
+      max-height: 200px; /* Adjust based on content */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="faq-container">
+      <h1>Frequently Asked Questions (FAQ)</h1>
+      <div class="faq-item">
+        <div class="faq-question">What is the ideal pH for drinking water?</div>
+        <div class="faq-answer">
+          The ideal pH for drinking water is between **6.5 and 8.5**. Water within this range is considered safe and neutral.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How does pH affect plant growth?</div>
+        <div class="faq-answer">
+          pH affects nutrient availability in the soil. Most plants grow best in a pH range of **6.0 to 7.0**. Outside this range, essential nutrients may become less available.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How can I lower the pH of my water naturally?</div>
+        <div class="faq-answer">
+          You can lower water pH naturally by adding **vinegar**, **citric acid**, or using **peat moss** in your water filtration system.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What plants grow best in acidic soil?</div>
+        <div class="faq-answer">
+          Plants like **blueberries**, **azaleas**, **hydrangeas**, and **rhododendrons** thrive in acidic soil (pH **5.0 to 6.0**).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How often should I test water pH?</div>
+        <div class="faq-answer">
+          For gardening, test water pH **every 2–4 weeks**. For drinking water, test it **every 6 months** or if you notice changes in taste or quality.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Water Quality Monitoring. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript for FAQ Dropdown
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        question.classList.toggle('active');
+        answer.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
