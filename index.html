@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Quality Monitoring</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <h1>Water Quality Monitoring System</h1>
+    <section>
+      <label for="pHInput">Enter Water pH:</label>
+      <input type="number" id="pHInput" step="0.1" placeholder="e.g., 6.5">
+      <button onclick="checkPlantSuitability()">Check Suitability</button>
+    </section>
+
+    <section>
+      <label for="plantSelect">Select a Plant:</label>
+      <select id="plantSelect">
+        <option value="Tomato">Tomato</option>
+        <option value="Rice">Rice</option>
+        <option value="Hydrangea (Blue)">Hydrangea (Blue)</option>
+        <option value="Hydrangea (Pink)">Hydrangea (Pink)</option>
+      </select>
+    </section>
+
+    <section id="result"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Water Quality Monitoring. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  </body>
+</html>
